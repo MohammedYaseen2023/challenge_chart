@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <title>Charts</title>
+</head>
+<body>
+<div class="text-center fs-3 fw-bold text-primary"> عدد الاسرى الفلسطينيين في سجون الاحتلال الاسرائلي</div>
+     <div id="chart" class ="py-5 ">
+    </div> 
+      <script >  
+         
+ var options = {
+        series: [44, 55, 13],
+        chart: {
+        width: 480,
+        type: 'pie',
+      },
+      labels: ['عدد الاسرى المحكومين', 'المفرج عنهم', 'المفقودين'],
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 300
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+      };
+ 
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+      </script>
+</body>
+</html>
